@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Editar Cliente</h1>
+        <form action="{{ url_for('updateClient', id=client['id']) }}" method="post" class="mt-3">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome: </label>
+                <input type="text" name="name" value="{{ client['name'] }}" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email: </label>
+                <input type="email" name="email" value="{{ client['email'] }}" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="born" class="form-label">Data de Nascimento: </label>
+                <input type="date" name="born" value="{{ client['born'] }}" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="bought" class="form-label">Fez Compras no Último Mês? </label>
+                <input type="checkbox" name="bought" value="{{ client['bought'] }}" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-success">Atualizar Produto</button>
+            <a href="{{ url_for('indexClients') }}" class="btn btn-secondary">Voltar</a>
+        </form>
+    </div>
+</body>
+</html>
