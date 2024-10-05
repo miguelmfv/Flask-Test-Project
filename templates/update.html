@@ -18,12 +18,12 @@
 
             <div class="mb-3">
                 <label for="description" class="form-label">Descrição: </label>
-                <input type="text" name="description" value="{{ product['description'] }}" class="form-control" required>
+                <input type="text" name="description" value="{{ product.descricao }}" class="form-control" required>
             </div>
 
             <div class="mb-3">
                 <label for="price" class="form-label">Preço: </label>
-                <input type="number" name="price" value="{{ product['price'] }}" class="form-control" required>
+                <input type="number" name="price" value="{{ product.preco }}" class="form-control" required>
             </div>
 
             <button type="submit" class="btn btn-success">Atualizar Produto</button>
