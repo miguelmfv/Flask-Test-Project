@@ -26,9 +26,9 @@
                 <input type="date" name="born" class="form-control" required>
             </div>
 
-            <div class="mb-3">
-                <label for="bought" class="form-label">Realizou Compras no Último Mês? </label>
-                <input type="checkbox" name="bought" class="form-control" required>
+            <div class="mb-3 form-check">
+                <input id="bgt" type="checkbox" name="bought" value="true" class="form-check-input">
+                <label for="bgt" class="form-check-label">Realizou Compras no Último Mês?</label>
             </div>
 
             <button type="submit" class="btn btn-success">Adicionar Cliente</button>
@@ -36,4 +36,11 @@
         </form>
     </div>
 </body>
+<script>
+    let bgt = document.getElementById("bgt")
+
+    bgt.onclick = function() {
+    console.log("clicou");
+    };
+</script>
 </html>

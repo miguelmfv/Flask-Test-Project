@@ -22,12 +22,12 @@
 
             <div class="mb-3">
                 <label for="born" class="form-label">Data de Nascimento: </label>
-                <input type="date" name="born" value="{{ client['born'] }}" class="form-control" required>
+                <input type="date" name="born" value="{{ client['dataNasc'].strftime('%Y-%m-%d') }}" class="form-control" required>
             </div>
 
-            <div class="mb-3">
-                <label for="bought" class="form-label">Fez Compras no Último Mês? </label>
-                <input type="checkbox" name="bought" value="{{ client['bought'] }}" class="form-control" required>
+            <div class="mb-3 form-check">
+                <input id="bougth" type="checkbox" name="bougth" value="true" class="form-check-input" {% if client.bougth %}checked{% endif %}>
+                <label for="bgt" class="form-check-label">Realizou Compras no Último Mês?</label>
             </div>
 
             <button type="submit" class="btn btn-success">Atualizar Produto</button>
